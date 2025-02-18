@@ -1,0 +1,52 @@
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuração de Wi-Fi no Windows</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo Wi-Fi" class="logo">
+        <h1>Guia de Conexão Wi-Fi</h1>
+    </header>
+    
+    <section class="container" id="home">
+        <h1>Conecte-se à Internet de Forma Simples</h1>
+        <p>Aprenda a configurar e otimizar sua rede Wi-Fi.</p>
+        <button onclick="startTutorial()">Começar</button>
+    </section>
+
+    <section id="tutorial" class="hidden">
+        <h2>Passo <span id="stepNumber">1</span></h2>
+        <p id="stepText">Abra as configurações do Windows.</p>
+        <div>
+            <button onclick="prevStep()">Voltar</button>
+            <button onclick="nextStep()">Próximo</button>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Solução de Problemas</h2>
+        <details>
+            <summary>Meu Wi-Fi não aparece na lista</summary>
+            <p>Certifique-se de que o Wi-Fi está ativado no seu dispositivo.</p>
+        </details>
+        <details>
+            <summary>Estou conectado, mas sem internet</summary>
+            <p>Reinicie o roteador e verifique sua conexão.</p>
+        </details>
+    </section>
+
+    <section class="container">
+        <h2>Testar Conexão</h2>
+        <button onclick="checkConnection()">Verificar Conexão</button>
+        <button onclick="scanNetworks()">Mostrar Redes Próximas</button>
+        <ul id="networkList"></ul>
+        <p id="connectionStatus"></p>
+        <p id="latencyStatus"></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
